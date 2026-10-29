@@ -13,5 +13,10 @@
   "googleSignInPageVerified": true,
   "ownerSignInVerified": true,
   "cloudSaveAndRefreshVerified": true,
-  "verifiedRevision": 1
+  "verifiedRevision": 3,
+  "productionUrl": "https://dolbundaljai-company.vercel.app/",
+  "repository": "https://github.com/AppStack-Development/dolbundaljai-company",
+  "repositoryVisibility": "public",
+  "productionGoogleSignInVerified": true,
+  "productionCloudSaveVerified": true
 }

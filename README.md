@@ -4,7 +4,11 @@ This is the separate Vercel-targeted edition of the existing pixel company. The 
 
 ## Delivery status
 
-Implementation and local validation are available. **Supabase project Dolbundaljai has been created in AppStack-Dev (Singapore), and the company_core migration and owner allowlist have been applied. Owner Google sign-in, callback, membership, cloud document save/history and refresh restoration are verified in the local app. Vercel deployment remains pending.** Cloud uploads and cross-device continuity still require the acceptance checks below.
+**Production: https://dolbundaljai-company.vercel.app/**
+
+Source: https://github.com/AppStack-Development/dolbundaljai-company (public by the owner's request). Vercel project `dolbundaljai-company` belongs to `appstack-development` and imports `main` from this repository. Production has the public Supabase URL and publishable key; preview environments are intentionally not connected to the production database.
+
+Supabase project Dolbundaljai is in AppStack-Dev (Singapore). Owner Google sign-in/callback, membership, cloud document save/history and refresh restoration were verified locally; production sign-in and a live document/history save were verified on 2026-10-29. Supabase Site URL is the production root, with both that exact URL and the local development URL allowed as redirects. Cloud uploads and cross-device continuity still require the acceptance checks below.
 
 The sole initial owner is `dolbundaljai@gmail.com`, selected by the user. An authenticated Google identity does not by itself grant company access. Membership is assigned only after the trusted confirmed auth email matches the private allowlist. Other accounts cannot read or write company data or files.
 
