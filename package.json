@@ -1,0 +1,22 @@
+{
+  "name": "dolbundaljai-company-cloud",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "vite --host 127.0.0.1",
+    "build": "vite build",
+    "preview": "vite preview --host 127.0.0.1",
+    "test": "node --test tests/*.test.js && node tests/database.integration.js"
+  },
+  "dependencies": {
+    "@supabase/supabase-js": "^2.118.0",
+    "tus-js-client": "^4.3.1"
+  },
+  "devDependencies": {
+    "@electric-sql/pglite": "^0.5.13",
+    "vite": "^8.3.5"
+  },
+  "engines": {
+    "node": ">=22.12.0"
+  }
+}

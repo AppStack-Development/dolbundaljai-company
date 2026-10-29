@@ -1,0 +1,17 @@
+{
+  "projectId": "pqyiufkvvnnoiovybkee",
+  "name": "Dolbundaljai",
+  "organizationId": "tmcvpqlqccinjqevwugk",
+  "organizationName": "AppStack-Dev",
+  "region": "ap-southeast-1",
+  "url": "https://pqyiufkvvnnoiovybkee.supabase.co",
+  "dashboard": "https://supabase.com/dashboard/project/pqyiufkvvnnoiovybkee",
+  "migration": "company_core",
+  "ownerEmail": "dolbundaljai@gmail.com",
+  "googleOAuthConfigured": true,
+  "googleProviderEnabledVerified": true,
+  "googleSignInPageVerified": true,
+  "ownerSignInVerified": true,
+  "cloudSaveAndRefreshVerified": true,
+  "verifiedRevision": 1
+}

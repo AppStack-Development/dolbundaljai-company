@@ -1,0 +1,11 @@
+node_modules/
+dist/
+.env*
+!.env.example
+.vercel/
+.impeccable/review/
+.DS_Store
+evidence/
+*.log
+*.pem
+*.key
