@@ -10,7 +10,7 @@ Source: https://github.com/AppStack-Development/dolbundaljai-company (public by 
 
 Supabase project Dolbundaljai is in AppStack-Dev (Singapore). Owner Google sign-in/callback, membership, cloud document save/history and refresh restoration were verified locally; production sign-in and a live document/history save were verified on 2026-10-29. Supabase Site URL is the production root, with both that exact URL and the local development URL allowed as redirects. Cloud uploads and cross-device continuity still require the acceptance checks below.
 
-The sole initial owner is `dolbundaljai@gmail.com`, selected by the user. An authenticated Google identity does not by itself grant company access. Membership is assigned only after the trusted confirmed auth email matches the private allowlist. Other accounts cannot read or write company data or files.
+The primary owner is `dolbundaljai@gmail.com`, selected by the user. An authenticated Google identity does not by itself grant company access. Membership is assigned only after the trusted confirmed auth email matches the private allowlist. Three privately invited director accounts have the same current management capabilities. Other Google accounts and signed-out guests can view the office simulation only; company data, history and files remain private. Guest viewing does not load company documents, saved interactions or overtime preferences. Each visit simulates the Bangkok schedule and pets locally. Logout is available to both members and signed-in viewers.
 
 ## Local commands
 
@@ -27,7 +27,7 @@ Local development uses `http://127.0.0.1:4174/`. Copy `.env.example` to `.env.lo
 
 ## Provisioning record
 
-Supabase project: `pqyiufkvvnnoiovybkee`, organization: `AppStack-Dev`, region: `ap-southeast-1`; status verified ACTIVE_HEALTHY on 2026-10-29. The company_core migration and owner seed are installed. Google callback URI: `https://pqyiufkvvnnoiovybkee.supabase.co/auth/v1/callback`. Public RPCs use invoker wrappers; definer implementations and the owner allowlist are in the unexposed private schema. Security advisor reported only the intentional no-policy entry on private.allowed_owners, which is closed to client roles by grants and RLS. [Advisor explanation](https://supabase.com/docs/guides/database/database-linter?lint=0008_rls_enabled_no_policy).
+Supabase project: `pqyiufkvvnnoiovybkee`, organization: `AppStack-Dev`, region: `ap-southeast-1`; status verified ACTIVE_HEALTHY on 2026-10-29. The company_core and company_directors migrations and the private invitations are installed. Google callback URI: `https://pqyiufkvvnnoiovybkee.supabase.co/auth/v1/callback`. Public RPCs use invoker wrappers; definer implementations and the owner allowlist are in the unexposed private schema. The private.allowed_owners table is intentionally closed to client roles by grants and RLS; its no-policy advisor entry is expected. The 2026-10-30 audit also reports disabled leaked-password protection; this app uses Google OAuth rather than passwords. [Advisor explanation](https://supabase.com/docs/guides/database/database-linter?lint=0008_rls_enabled_no_policy).
 
 ## One-time service setup (steps 1–2 completed)
 
@@ -79,3 +79,11 @@ Unit tests cover queue serialization, immutable snapshots, retry/conflict and im
 The AI research/generation/editing services are still unconnected. This change adds identity and persistence, not autonomous content production or posting. No subscription cost has been committed. History snapshots and immutable media accumulate; agree on retention and backup before scaling beyond the pilot.
 
 Official references: [Google provider](https://supabase.com/docs/guides/auth/social-sign-in/auth-google), [PKCE](https://supabase.com/docs/guides/auth/sessions/pkce-flow), [Storage policies](https://supabase.com/docs/guides/storage/security/access-control), [uploads](https://supabase.com/docs/guides/storage/uploads/standard-uploads), [public keys](https://supabase.com/docs/guides/getting-started/api-keys).
+
+## Access roles (2026-10-30)
+
+- Apply all files in `supabase/migrations` in filename order on a fresh installation, then seed the primary owner. Existing deployments apply only pending migrations.
+- Provision director invitations through the administrator connection in `private.allowed_owners(email,role)`, with normalized email and role `director`. Do not commit personal invitation addresses to the public repository.
+- Membership is created on the first verified Google login. Role comes from the private database invitation, never from browser metadata. A unique index permits one owner. All document RPCs and private Storage policies check both current membership and invitation. Revoking an invitation removes access immediately, even with an existing membership.
+- Google OAuth audience configuration is separate from company permissions. Basic `openid email profile` scopes are used; no Gmail access is requested.
+- Automated database checks cover three director identities, approvals/saves, private uploads, revocation, self-escalation denial, unconfirmed/non-Google denial, guest isolation and conflict protection. Live guest, member login and logout are checked separately.

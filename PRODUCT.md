@@ -3,7 +3,7 @@
 ## Platform
 web
 ## Stack
-Delegated by user. Existing vanilla HTML/CSS/JavaScript company, bundled with Vite, Supabase Auth (Google), PostgreSQL and private Storage; target host Vercel. This sibling migration preserves the original Sites edition and its hosted identity. Keep AI orchestration and video rendering as explicit unconnected services; do not fake production activity. Live service connections and Google configuration are pending.
+Delegated by user. Existing vanilla HTML/CSS/JavaScript company, bundled with Vite, Supabase Auth (Google), PostgreSQL and private Storage; target host Vercel. This sibling migration preserves the original Sites edition and its hosted identity. Keep AI orchestration and video rendering as explicit unconnected services; do not fake production activity. Google login and central persistence are live on Vercel.
 ## Users
 Thai shop owner, selling crispy baked pork strips and popcorn. Owner supplies factual product data and source media, approves the final version, and uploads manually to Shopee, Lazada and TikTok.
 ## Product Purpose
@@ -11,7 +11,7 @@ A virtual pixel company contains Content Studio as its first team. Explore nine 
 ## Operating Context
 One original clip per day. Existing images and footage are limited. Each clip may require a precise additional shot request. Product specifications, flavours, price, claims, label images and media are not supplied yet.
 ## Capabilities and Constraints
-Five roles: manager, researcher, writer/director, producer, reviewer. Seven editable concept briefs, product intake, media library, manual draft-video import, review and revision-aware approval, manual publication links. Central persistence must report success only after server acknowledgement. Restrict initial owner to dolbundaljai@gmail.com. Keep immutable version history, reject stale writes, support best-effort account-scoped pending drafts and export for recovery. Company life is an explicitly labelled simulation. No background AI, fabricated completed videos, fabricated research, or automatic publishing. Actual production is pending inputs and provider integration.
+Five roles: manager, researcher, writer/director, producer, reviewer. Seven editable concept briefs, product intake, media library, manual draft-video import, review and revision-aware approval, manual publication links. Central persistence must report success only after server acknowledgement. Keep dolbundaljai@gmail.com as the single primary owner. Three privately provisioned Google accounts are directors with the same current management permissions. All other Google accounts and signed-out visitors may view only the public office simulation; they cannot interact with characters, enter Content Studio, or access company documents, history, or files. Keep immutable version history, reject stale writes, support best-effort account-scoped pending drafts and export for recovery. Company life is an explicitly labelled simulation. No background AI, fabricated completed videos, fabricated research, or automatic publishing. Actual production is pending inputs and provider integration.
 ## Brand Commitments
 Confirmed store name: ดลบันดาลใจ / Dolbundaljai. Pastel colours, cute and playful. Virtual pixel team is a binding visual direction. User chose direct working web implementation, not image comps.
 ## Evidence on Hand

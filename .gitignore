@@ -9,3 +9,4 @@ evidence/
 *.log
 *.pem
 *.key
+supabase/.temp/
