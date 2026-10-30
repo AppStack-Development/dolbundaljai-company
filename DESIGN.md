@@ -262,3 +262,7 @@ Local verification: login rendered at 840px, desktop 1440px (scaled iframe) and 
 The welcome page pairs the primary Google sign-in action with a secondary “รับชมบริษัท” button. Members see their server-assigned owner/director role and logout in the existing toolbar. Visitors see a compact brand header, “ผู้เยี่ยมชม · ดูอย่างเดียว” badge, and Google login or logout. The office map, schedule and status inspector remain available; character commands and studio navigation are omitted. Public copy explicitly distinguishes the local office simulation from private work. The viewer header wraps below 700px, and the map retains local horizontal scrolling.
 
 Viewer brand uses the existing 22px heading size; the visitor badge uses the existing lilac `#eee6f5` and dark `#594866` palette. Desktop and 390px mobile checks show wrapping account controls and no page overflow. Detector warnings about the pixel-floor border and hidden media preview are existing, intentional components.
+
+## Profile disclosure
+
+Signed-in members and viewers open an account disclosure from the top-right “โปรไฟล์” control. The panel displays the Google display name, email and database-assigned role, followed by logout. Use the existing pastel palette, 44px controls, 14px panel radius and shared soft shadow. Native details/summary supports keyboard activation; outside click, focus leaving and Escape dismiss it. Escape restores focus to the trigger. Guests retain the Google login action. The save toolbar contains only save feedback and recovery actions.
